@@ -12,13 +12,12 @@ $(function() {
             var email = $("input#email").val();
             var message = $("textarea#message").val();
             var firstName = name; // For Success/Failure Message
-
             // Check for white space in name for Success/Fail message
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "../cheaplots4sale.github.io/blob/master/mail/contact_me.php", //././mail/
+                url: "././mail/contact_me.php",
                 type: "POST",
                 data: {
                     name: name,
@@ -28,7 +27,6 @@ $(function() {
                 cache: false,
                 success: function() {
                     // Success message
-                    console.log("Success to send")
                     $('#success').html("<div class='alert alert-success'>");
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
@@ -42,7 +40,6 @@ $(function() {
                 },
                 error: function() {
                     // Fail message
-                    console.log("Failed to send")
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
