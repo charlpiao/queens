@@ -346,7 +346,7 @@ ol.type li a {
 }
 ol.type li a.active {
 	color: #fff;
-	background-color: red;
+	background-color: gold;
 }
 ol.type li a:hover {
 	color: #fff;
